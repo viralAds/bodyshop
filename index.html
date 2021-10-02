@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Slider</title>
+  </head>
+  <body>
+    <div class="my_page">
+      <div class="slider">
+        <div class="circular-slider circular-slider-1">
+          <div class="wrapper">
+            <video
+              id="myvideo"
+              ontimeupdate="pageLoaded()"
+              onloadedmetadata="loadMeta()"
+              class="myvideo"
+              autoplay
+              width="100%"
+              height="100%"
+            >
+              <source src="img/bodyshop.mp4" type="video/mp4" />
+            </video>
+            <div id="toggleSlider" onclick="toggleSlider()">
+              <img id="toggleImg" src="img/open_arrow.png" alt="open" />
+            </div>
+            <div class="controls">
+              <div class="controls__left">
+                <div class="icon-wrapper">
+                  <img src="./img/down_ar.png" alt="up_arrow" />
+                </div>
+              </div>
+              <div class="controls__right">
+                <div class="icon-wrapper">
+                  <img src="./img/up_arrow.png" alt="down_arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="slides-holder">
+              <div class="slides-holder__item slides-holder__item_active">
+                <a
+                  href="https://www.thebodyshop.in/body/body-butters.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="img/product_1.png" alt="img" />
+                </a>
+              </div>
+
+              <div class="slides-holder__item">
+                <a
+                  href="https://www.thebodyshop.in/body/body-butters.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="img/product_2.png" alt="img" />
+                </a>
+              </div>
+              <div class="slides-holder__item">
+                <a
+                  href="https://www.thebodyshop.in/body/body-butters.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="img/product_3.png" alt="img" />
+                </a>
+              </div>
+              <div class="slides-holder__item">
+                <a
+                  href="https://www.thebodyshop.in/body/body-butters.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="img/product_4.png" alt="img" />
+                </a>
+              </div>
+            </div>
+            <div class="descriptions">
+              <div class="descriptions__item descriptions__item_visible"></div>
+              <div class="descriptions__item"></div>
+              <div class="descriptions__item"></div>
+              <div class="descriptions__item"></div>
+            </div>
+          </div>
+        </div>
+        <div id="video-controls" class="videos-controls" data-state="hidden">
+          <div class="progress">
+            <progress id="progress" value="0.5" min="0">
+              <span id="progress-bar"></span>
+            </progress>
+          </div>
+          <div class="nonprogress">
+            <div class="playpause">
+              <i
+                id="play"
+                data-state="play"
+                class="fa fa-play"
+                aria-hidden="true"
+                onclick="playVideo()"
+              ></i>
+              <i
+                id="pause"
+                data-state="pause"
+                class="fa fa-pause"
+                aria-hidden="true"
+                onclick="pauseVideo()"
+              ></i>
+              <span id="current_time" class="time">0.0</span>
+              <span class="time"> / </span>
+              <span class="time" id="video_duration"></span>
+            </div>
+            <div class="voiceSize">
+              <i
+                id="mute"
+                class="fa fa-volume-down"
+                aria-hidden="true"
+                onclick="muteVideo()"
+              ></i>
+              <i
+                id="unmute"
+                class="fa fa-volume-up"
+                aria-hidden="true"
+                onclick="unmuteVideo()"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/circular-slider.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+  </body>
+</html>
