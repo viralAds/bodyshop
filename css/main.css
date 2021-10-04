@@ -403,6 +403,12 @@ body {
     margin-top: -10px;
     z-index: 999;
   }
+  #toggleSlider img {
+    width: 90%;
+    height: 90%;
+    transform: rotate(180deg);
+    transition-duration: 0.4s;
+  }
 }
 
 /* 
@@ -411,7 +417,7 @@ video-controls
 
 .videos-controls {
   width: 100%;
-  height: 8%; 
+  height: 8%;
   position: relative;
 }
 .videos-controls[data-state="visible"] {
@@ -496,4 +502,19 @@ video-controls
 
 #video_duration {
   display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .time {
+    color: #fff;
+    font-size: 14px;
+  }
+  .videos-controls svg,
+  .videos-controls i {
+    width: 12px !important;
+    height: 12px !important;
+    font-size: 12px !important;
+    color: #ffffff !important;
+    margin: 0 10px;
+  }
 }
