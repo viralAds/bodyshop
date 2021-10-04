@@ -299,6 +299,7 @@ table {
 .circular-slider .wrapper .slides-holder__item img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 284 / 496;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
