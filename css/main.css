@@ -283,7 +283,7 @@ table {
 
 .circular-slider .wrapper .slides-holder__item {
   position: absolute;
-  padding: 15px;
+  /* padding: 15px; */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transform-origin: center;
