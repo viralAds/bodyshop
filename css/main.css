@@ -293,8 +293,8 @@ table {
   -webkit-transition: 0.3s linear all;
   -o-transition: 0.3s linear all;
   transition: 0.3s linear all;
-  -webkit-filter: brightness(70%);
-  filter: brightness(70%);
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
 }
 .circular-slider .wrapper .slides-holder__item img {
   width: 100%;
