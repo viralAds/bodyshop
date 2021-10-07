@@ -312,7 +312,7 @@ function unmuteVideo() {
 function loadMeta() {
   var video_duration = document.getElementById("myvideo").duration;
   document.getElementById("video_duration").innerHTML = (
-    video_duration / 60
+    Math.ceil(video_duration)
   ).toFixed(2);
 }
 
@@ -326,8 +326,8 @@ function pageLoaded() {
 
 function onVideoTimeUpdate(video, duration) {
   document.getElementById("current_time").innerHTML = (
-    video.currentTime / 60
-  ).toFixed(2);
+    Math.floor(video.currentTime)
+  ).toFixed(2);   
   document.getElementById("progress").value = video.currentTime / duration;
   if ((video.currentTime / 60).toFixed(2) > 0.54) {
     document.getElementsByClassName("controls")[0].style.display = "none";
